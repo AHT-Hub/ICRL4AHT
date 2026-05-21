@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "icrl-aht-benchmark"
+version = "1.0.0"
+description = "Benchmark for In-Context Reinforcement Learning in Ad Hoc Teamwork"
+requires-python = ">=3.11"
+keywords = ["reinforcement-learning", "multi-agent", "jax", "benchmark"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    # JAX AI stack v2025.2.5
+    "jax[cuda12]==0.5.3",
+    # "jax==0.5.3",
+    "chex==0.1.88",
+    "flax==0.10.2",
+    "ml_dtypes==0.4.0",
+    "optax==0.2.4",
+    "orbax-checkpoint==0.11.1",
+    "orbax-export==0.0.6",
+    # Core dependencies
+    "numpy",
+    "gymnax",
+    "distrax",
+    "safetensors",
+    "moviepy",
+    "ffmpeg",
+    "prettytable",
+    "rliable",
+    "matplotlib",
+    "hydra-core",
+    "huggingface-hub",
+    # Environment dependencies
+    "jaxmarl==0.0.7",
+    "pytest",
+    "h5py",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agents*", "benchmarks*", "common*", "envs*", "marl*", "runners*", "scripts*", "teammate_generation*", "teammate_wrapper*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml", "*.yml", "*.json", "*.md", "*.jsonl"]
