@@ -214,3 +214,38 @@ icrl4aht/
 | **Territory** | Spatial region specialization |
 | **Utility Greedy** | Weighted utility-based action selection |
 | **Recipe Aware Button** | Recipe-conditioned behavior |
+
+## Acknowledgements
+
+Parts of the JAX-based teammate generation pipeline in ICRL4AHT build on the open-source [JaxAHT](https://github.com/LARG/jax-aht) codebase. We thank the JaxAHT authors for making their implementations publicly available.
+
+The JaxAHT MIT license and copyright notice are included in [`third_party/JaxAHT_LICENSE`](third_party/JaxAHT_LICENSE).
+
+## Citation
+
+If you find this repository useful, please consider citing our paper:
+
+```bibtex
+@inproceedings{
+jing2026benchmarking,
+title={Benchmarking the Limits of In-Context Reinforcement Learning for Ad-Hoc Teamwork},
+author={Yuheng Jing and Kai Li and Jiajun Zhang and Zeyao Ma and Jiaxi Yang and Lei Zhang and Zhe Wu and Jinmin He and Junliang Xing and Jian Cheng},
+booktitle={Forty-third International Conference on Machine Learning},
+year={2026},
+url={https://openreview.net/forum?id=EbkumuY3eW}
+}
+```
+
+The JAX-based teammate generation components build on JaxAHT. Please also cite:
+
+```bibtex
+@misc{wang2026jaxaht,
+      title={JaxAHT: A JAX-Based Library for Ad Hoc Teamwork},
+      author={Caroline Wang and Rolando Fernandez and Zelal Su Mustafaoglu and Montek Kundan and Jiaxun Cui and Lingyun Xiao and Zhihan Wang and Di Yang Shi and Aditya Madhan and Johnny Liu and Arrasy Rahman and Peter Stone},
+      year={2026},
+      eprint={2609.13716},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2609.13716},
+}
+```
